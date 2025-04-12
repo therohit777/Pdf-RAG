@@ -1,0 +1,646 @@
+2025-04-11 00:28:51,783 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-74ffd8c74063', bound_args=<BoundArgumen...'github'}])})>, instance=<app.workflow...00198B89AE6D0>, context=<_contextvars...00198B8952240>)(<WorkflowHand...ute 'query'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-74ffd8c74063', bound_args=<BoundArgumen...'github'}])})>, instance=<app.workflow...00198B89AE6D0>, context=<_contextvars...00198B8952240>)(<WorkflowHand...ute 'query'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 85, in __getattr__
+    return self._data[__name]
+           ~~~~~~~~~~^^^^^^^^
+KeyError: 'query'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 35, in collect_images
+    print(f"Starting image collection for query: {ev.query}")
+                                                  ^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 87, in __getattr__
+    raise AttributeError(
+AttributeError: 'StartEvent' object has no attribute 'query'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 'StartEvent' object has no attribute 'query'
+2025-04-11 00:29:40,473 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-c901885dca3f', bound_args=<BoundArgumen...'github'}])})>, instance=<app.workflow...00198B89F6BD0>, context=<_contextvars...00198B88A7440>)(<WorkflowHand...ute 'query'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-c901885dca3f', bound_args=<BoundArgumen...'github'}])})>, instance=<app.workflow...00198B89F6BD0>, context=<_contextvars...00198B88A7440>)(<WorkflowHand...ute 'query'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 85, in __getattr__
+    return self._data[__name]
+           ~~~~~~~~~~^^^^^^^^
+KeyError: 'query'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 35, in collect_images
+    print(f"Starting image collection for query: {ev.query}")
+                                                  ^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 87, in __getattr__
+    raise AttributeError(
+AttributeError: 'StartEvent' object has no attribute 'query'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 'StartEvent' object has no attribute 'query'
+2025-04-11 00:30:02,465 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-2bd7f0564ab3', bound_args=<BoundArgumen...'github'}])})>, instance=<app.workflow...0021AB5C67750>, context=<_contextvars...0021AB5C67EC0>)(<WorkflowHand...ute 'query'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-2bd7f0564ab3', bound_args=<BoundArgumen...'github'}])})>, instance=<app.workflow...0021AB5C67750>, context=<_contextvars...0021AB5C67EC0>)(<WorkflowHand...ute 'query'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 85, in __getattr__
+    return self._data[__name]
+           ~~~~~~~~~~^^^^^^^^
+KeyError: 'query'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 35, in collect_images
+    print(f"Starting image collection for query: {ev.query}")
+                                                  ^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 87, in __getattr__
+    raise AttributeError(
+AttributeError: 'StartEvent' object has no attribute 'query'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 'StartEvent' object has no attribute 'query'
+2025-04-11 01:52:17,602 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-8ff089c6ae6e', bound_args=<BoundArgumen...'github'}])})>, instance=<app.workflow...001DEA42875D0>, context=<_contextvars...001DEA4287B40>)(<WorkflowHand...e 'payload'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-8ff089c6ae6e', bound_args=<BoundArgumen...'github'}])})>, instance=<app.workflow...001DEA42875D0>, context=<_contextvars...001DEA4287B40>)(<WorkflowHand...e 'payload'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 85, in __getattr__
+    return self._data[__name]
+           ~~~~~~~~~~^^^^^^^^
+KeyError: 'payload'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 35, in collect_images
+    print(f"Starting image collection for query: {ev.payload}")
+                                                  ^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 87, in __getattr__
+    raise AttributeError(
+AttributeError: 'StartEvent' object has no attribute 'payload'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 'StartEvent' object has no attribute 'payload'
+2025-04-11 01:52:36,751 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-7e710fe81730', bound_args=<BoundArgumen...'github'}])})>, instance=<app.workflow...001DEA42C3D10>, context=<_contextvars...001DEA42874C0>)(<WorkflowHand...e 'payload'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-7e710fe81730', bound_args=<BoundArgumen...'github'}])})>, instance=<app.workflow...001DEA42C3D10>, context=<_contextvars...001DEA42874C0>)(<WorkflowHand...e 'payload'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 85, in __getattr__
+    return self._data[__name]
+           ~~~~~~~~~~^^^^^^^^
+KeyError: 'payload'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 35, in collect_images
+    print(f"Starting image collection for query:")
+                                                  ^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 87, in __getattr__
+    raise AttributeError(
+AttributeError: 'StartEvent' object has no attribute 'payload'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 'StartEvent' object has no attribute 'payload'
+2025-04-11 02:24:10,890 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-57dd8cff4ccc', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...002698E6F1F50>, context=<_contextvars...002698E6F2640>)(<WorkflowHand...'list_data'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-57dd8cff4ccc', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...002698E6F1F50>, context=<_contextvars...002698E6F2640>)(<WorkflowHand...'list_data'")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 85, in __getattr__
+    return self._data[__name]
+           ~~~~~~~~~~^^^^^^^^
+KeyError: 'list_data'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 36, in collect_images
+    print(f"Starting Image collection for query: {ev.list_data}")
+                                                  ^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 87, in __getattr__
+    raise AttributeError(
+AttributeError: 'StartEvent' object has no attribute 'list_data'
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 'StartEvent' object has no attribute 'list_data'
+2025-04-11 03:05:46,185 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-6da757f9867e', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...0014E1FDE6B50>, context=<_contextvars...0014E1FC86740>)(<WorkflowHand...v/dict_type")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-6da757f9867e', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...0014E1FDE6B50>, context=<_contextvars...0014E1FC86740>)(<WorkflowHand...v/dict_type")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 41, in start_regression_testing
+    return ImageCollectionEvent(link_data=ev.input_links_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 74, in __init__
+    super().__init__(**fields)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ImageCollectionEvent
+link_data.0
+  Input should be a valid dictionary [type=dict_type, input_value=('link_data', [{'pageName...'https://github.com/'}]), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.11/v/dict_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'start_regression_testing': 1 validation error for ImageCollectionEvent
+link_data.0
+  Input should be a valid dictionary [type=dict_type, input_value=('link_data', [{'pageName...'https://github.com/'}]), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.11/v/dict_type
+2025-04-11 03:08:20,121 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-0706fe78b5e4', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...00221AEAF6D50>, context=<_contextvars...00221AEAF7400>)(<WorkflowHand...v/dict_type")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-0706fe78b5e4', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...00221AEAF6D50>, context=<_contextvars...00221AEAF7400>)(<WorkflowHand...v/dict_type")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 43, in start_regression_testing
+    return ImageCollectionEvent(link_data=webpage_data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 74, in __init__
+    super().__init__(**fields)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for ImageCollectionEvent
+link_data.0
+  Input should be a valid dictionary [type=dict_type, input_value=('link_data', [{'pageName...'https://github.com/'}]), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.11/v/dict_type
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'start_regression_testing': 1 validation error for ImageCollectionEvent
+link_data.0
+  Input should be a valid dictionary [type=dict_type, input_value=('link_data', [{'pageName...'https://github.com/'}]), input_type=tuple]
+    For further information visit https://errors.pydantic.dev/2.11/v/dict_type
+2025-04-11 16:28:07,631 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-0ea6d8b34923', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...0024B396EBB50>, context=<_contextvars...0024B395A4E00>)(<WorkflowHand...1/v/missing")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-0ea6d8b34923', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...0024B396EBB50>, context=<_contextvars...0024B395A4E00>)(<WorkflowHand...1/v/missing")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 56, in collect_images
+    return CompareEvent(CompareEvent="")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 74, in __init__
+    super().__init__(**fields)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for CompareEvent
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 1 validation error for CompareEvent
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-04-11 16:29:14,994 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-d072b916d098', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...0024B39757A90>, context=<_contextvars...0024B396EBA40>)(<WorkflowHand...1/v/missing")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-d072b916d098', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...0024B39757A90>, context=<_contextvars...0024B396EBA40>)(<WorkflowHand...1/v/missing")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 56, in collect_images
+    print(data)
+       ^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 74, in __init__
+    super().__init__(**fields)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for CompareEvent
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 1 validation error for CompareEvent
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-04-11 16:29:36,679 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-f776fe831c3a', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...001EE691EBE90>, context=<_contextvars...001EE690A4E00>)(<WorkflowHand...1/v/missing")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-f776fe831c3a', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...001EE691EBE90>, context=<_contextvars...001EE690A4E00>)(<WorkflowHand...1/v/missing")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 57, in collect_images
+    return CompareEvent(CompareEvent="")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 74, in __init__
+    super().__init__(**fields)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for CompareEvent
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 1 validation error for CompareEvent
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-04-11 16:32:10,692 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-1c3098b9949c', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...002437587BD10>, context=<_contextvars...00243758903C0>)(<WorkflowHand...1/v/missing")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-1c3098b9949c', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...002437587BD10>, context=<_contextvars...00243758903C0>)(<WorkflowHand...1/v/missing")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 57, in collect_images
+    return CompareEvent(CompareEvent="")
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 74, in __init__
+    super().__init__(**fields)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for CompareEvent
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 1 validation error for CompareEvent
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-04-11 16:32:42,094 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-e5548d9a0ce8', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...00243758EB950>, context=<_contextvars...002437587BC00>)(<WorkflowHand...1/v/missing")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-e5548d9a0ce8', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...00243758EB950>, context=<_contextvars...002437587BC00>)(<WorkflowHand...1/v/missing")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 57, in collect_images
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\events.py", line 74, in __init__
+    super().__init__(**fields)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\pydantic\main.py", line 253, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for CompareEvent
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'collect_images': 1 validation error for CompareEvent
+message
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.11/v/missing
+2025-04-11 17:17:03,519 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-1c69fe474400', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...00219BA61BD90>, context=<_contextvars...00219BA630400>)(<WorkflowHand... expression")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-1c69fe474400', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...00219BA61BD90>, context=<_contextvars...00219BA630400>)(<WorkflowHand... expression")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 65, in generate_images
+    await generate_screenshots([ev.query])
+TypeError: object NoneType can't be used in 'await' expression
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'generate_images': object NoneType can't be used in 'await' expression
+2025-04-11 17:20:58,188 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-8f2ae603f741', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...001CB9DE3BF10>, context=<_contextvars...001CB9DE50680>)(<WorkflowHand... expression")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-8f2ae603f741', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...001CB9DE3BF10>, context=<_contextvars...001CB9DE50680>)(<WorkflowHand... expression")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 65, in generate_images
+    images = await generate_screenshots([ev.query])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object str can't be used in 'await' expression
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'generate_images': object str can't be used in 'await' expression
+2025-04-11 17:33:42,640 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-424af4b1e82b', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...002D23CD5BE50>, context=<_contextvars...002D23CD70580>)(<WorkflowHand... expression")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-424af4b1e82b', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...002D23CD5BE50>, context=<_contextvars...002D23CD70580>)(<WorkflowHand... expression")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 65, in generate_images
+    images = await generate_screenshots([ev.query])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object str can't be used in 'await' expression
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'generate_images': object str can't be used in 'await' expression
+2025-04-11 17:35:16,104 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-803a89d33e0e', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...002F4E92FBAD0>, context=<_contextvars...002F4E91B7480>)(<WorkflowHand... expression")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-803a89d33e0e', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...002F4E92FBAD0>, context=<_contextvars...002F4E91B7480>)(<WorkflowHand... expression")>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 583, in _step_worker
+    new_ev = await instrumented_step(**kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 368, in async_wrapper
+    result = await func(*args, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Rohit\Desktop\Testing\Backend\app\workflows\Testingworkflow.py", line 65, in generate_images
+    images = await generate_screenshots([ev.query])
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: object str can't be used in 'await' expression
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 394, in _run_workflow
+    raise exception_raised
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\context.py", line 592, in _step_worker
+    raise WorkflowRuntimeError(
+llama_index.core.workflow.errors.WorkflowRuntimeError: Error in step 'generate_images': object str can't be used in 'await' expression
+2025-04-11 17:39:58,798 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-a5c9eb2d71f4', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...001FBC3D6BD50>, context=<_contextvars...001FBC3D805C0>)(<WorkflowHand... 10 seconds')>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-a5c9eb2d71f4', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...001FBC3D6BD50>, context=<_contextvars...001FBC3D805C0>)(<WorkflowHand... 10 seconds')>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 401, in _run_workflow
+    raise WorkflowTimeoutError(msg)
+llama_index.core.workflow.errors.WorkflowTimeoutError: Operation timed out after 10 seconds
+2025-04-11 18:09:02,650 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-29dbb69b67d1', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...001FBC3DAB190>, context=<_contextvars...001FBC3D82640>)(<WorkflowHand... 10 seconds')>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-29dbb69b67d1', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...001FBC3DAB190>, context=<_contextvars...001FBC3D82640>)(<WorkflowHand... 10 seconds')>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 401, in _run_workflow
+    raise WorkflowTimeoutError(msg)
+llama_index.core.workflow.errors.WorkflowTimeoutError: Operation timed out after 10 seconds
+2025-04-11 18:11:09,241 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-add2a0cab0ac', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...001FBC3DFCD90>, context=<_contextvars...001FBC3D2DB00>)(<WorkflowHand... 10 seconds')>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-add2a0cab0ac', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...001FBC3DFCD90>, context=<_contextvars...001FBC3D2DB00>)(<WorkflowHand... 10 seconds')>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 401, in _run_workflow
+    raise WorkflowTimeoutError(msg)
+llama_index.core.workflow.errors.WorkflowTimeoutError: Operation timed out after 10 seconds
+2025-04-11 18:16:38,382 [ERROR] asyncio: Exception in callback Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-805cbfb16a71', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...0017F16B2BF10>, context=<_contextvars...0017F169D7480>)(<WorkflowHand... 10 seconds')>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274
+handle: <Handle Dispatcher.span.<locals>.wrapper.<locals>.handle_future_result(span_id='Workflow.run...-805cbfb16a71', bound_args=<BoundArgumen...ub.com/'}])})>, instance=<app.workflow...0017F16B2BF10>, context=<_contextvars...0017F169D7480>)(<WorkflowHand... 10 seconds')>) at C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py:274>
+Traceback (most recent call last):
+  File "C:\Program Files\Python311\Lib\asyncio\events.py", line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\instrumentation\dispatcher.py", line 286, in handle_future_result
+    raise exception
+  File "C:\Users\Rohit\Desktop\Testing\Backend\venv\Lib\site-packages\llama_index\core\workflow\workflow.py", line 401, in _run_workflow
+    raise WorkflowTimeoutError(msg)
+llama_index.core.workflow.errors.WorkflowTimeoutError: Operation timed out after 10 seconds
+2025-04-12 12:18:46,590 [ERROR] fastapi: Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-04-12 12:19:08,403 [ERROR] fastapi: Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-04-12 12:19:32,001 [ERROR] fastapi: Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-04-12 12:24:54,738 [ERROR] fastapi: Form data requires "python-multipart" to be installed. 
+You can install "python-multipart" with: 
+
+pip install python-multipart
+
+2025-04-12 15:23:24,454 [INFO] openai: error_code=rate_limit_exceeded error_message='Rate limit reached for gpt-4o-mini in organization org-yFaDEeoiTDdKfWzVODc6xeki on tokens per min (TPM): Limit 100000, Used 96271, Requested 5615. Please try again in 13h34m45.119s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+2025-04-12 15:25:16,641 [INFO] openai: error_code=rate_limit_exceeded error_message='Rate limit reached for gpt-4o-mini in organization org-yFaDEeoiTDdKfWzVODc6xeki on tokens per min (TPM): Limit 100000, Used 96267, Requested 5615. Please try again in 13h33m1.44s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+2025-04-12 15:25:32,456 [INFO] openai: error_code=rate_limit_exceeded error_message='Rate limit reached for gpt-4o-mini in organization org-yFaDEeoiTDdKfWzVODc6xeki on tokens per min (TPM): Limit 100000, Used 96266, Requested 5615. Please try again in 13h32m35.52s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+2025-04-12 15:27:25,842 [INFO] openai: error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2025-04-12 15:28:11,495 [INFO] openai: error_code=insufficient_quota error_message='You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.' error_param=None error_type=insufficient_quota message='OpenAI API error received' stream_error=False
+2025-04-12 15:29:17,319 [INFO] openai: error_code=rate_limit_exceeded error_message='Rate limit reached for gpt-4o-mini in organization org-yFaDEeoiTDdKfWzVODc6xeki on tokens per min (TPM): Limit 100000, Used 96257, Requested 5615. Please try again in 13h28m42.24s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+2025-04-12 15:31:36,800 [INFO] openai: error_code=rate_limit_exceeded error_message='Rate limit reached for gpt-4o-mini in organization org-yFaDEeoiTDdKfWzVODc6xeki on tokens per min (TPM): Limit 100000, Used 96252, Requested 5615. Please try again in 13h26m32.64s. Visit https://platform.openai.com/account/rate-limits to learn more. You can increase your rate limit by adding a payment method to your account at https://platform.openai.com/account/billing.' error_param=None error_type=tokens message='OpenAI API error received' stream_error=False
+2025-04-12 15:33:36,600 [INFO] openai: error_code=invalid_api_key error_message='Incorrect API key provided: sk-proj-********************************************************************************************************************************************************ZykA. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2025-04-12 15:34:30,706 [INFO] openai: error_code=invalid_api_key error_message='Incorrect API key provided: sk-proj-********************************************************************************************************************************************************ZykA. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
+2025-04-12 15:37:19,696 [INFO] openai: error_code=invalid_api_key error_message='Incorrect API key provided: sk-proj-********************************************************************************************************************************************************ZykA. You can find your API key at https://platform.openai.com/account/api-keys.' error_param=None error_type=invalid_request_error message='OpenAI API error received' stream_error=False
